@@ -1,0 +1,13 @@
+<template>
+    <c-filter-input onfilterchange={handleFiltering}></c-filter-input>
+    <c-agent-work-table work-records={agentWorkRecords}
+                        filter-string={filterString}
+                        onsortchange={handleSorting}
+                        onnavigate={navigateToCase}
+                        onfiltering={populateFilteredRecordIds}>
+    </c-agent-work-table>
+    <c-pdf-export record-ids= {filteredRecordIds}
+                  sort-direction={sortDirection}
+                  sort-field={sortField}>
+    </c-pdf-export>
+</template>

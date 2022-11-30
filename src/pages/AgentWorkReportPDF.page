@@ -1,0 +1,37 @@
+<apex:page id="AgentWorkReportPDF" renderAs="pdf" controller="AgentWorkReportController" pageStyle="landscape">
+    <apex:dataTable value="{!records}" var="record" border="1">
+        <apex:facet name="header">Agent Work Report</apex:facet>
+        <apex:column>
+            <apex:facet name="header">Case Id</apex:facet>
+            <apex:outputText value="{!record.WorkItemId}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Assign Date</apex:facet>
+            <apex:outputText value="{!record.AcceptDatetime}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Active Time</apex:facet>
+            <apex:outputText value="{!record.ActiveTime}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Handle Time</apex:facet>
+            <apex:outputText value="{!record.HandleTime}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Speed To Answer</apex:facet>
+            <apex:outputText value="{!record.SpeedToAnswer}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Decline Date</apex:facet>
+            <apex:outputText value="{!record.DeclineDatetime}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Decline Reason</apex:facet>
+            <apex:outputText value="{!record.DeclineReason}"/>
+        </apex:column>
+        <apex:column>
+            <apex:facet name="header">Last Modified</apex:facet>
+            <apex:outputText value="{!record.LastModifiedDate}"/>
+        </apex:column>
+    </apex:dataTable>
+</apex:page>

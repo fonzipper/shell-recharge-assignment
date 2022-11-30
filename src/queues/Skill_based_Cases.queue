@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Skill-based Cases</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>AllInternalUsers</publicGroup>
+        </publicGroups>
+        <users>
+            <user>support@shell.assignment</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Skill_based_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>
